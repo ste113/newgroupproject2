@@ -1,0 +1,72 @@
+<script src="https://cdn.tailwindcss.com"></script>
+
+<body class="bg-black">
+  <div class="grid w-screen place-items-center text-black min-h-screen">
+
+    <form
+      action="{{action}}"
+      method="post"
+      class="max-w-[750px] mt-[20vh] pt-20 bg-white text-black rounded-lg"
+    >
+      <div class="flex justify-between px-24">
+        <h2 class="text-4xl">Results</h2>
+        <p class="">Total points: {{score}}/5</p>
+      </div>
+      <div class="pt-5 px-24">
+        <p>Your answer (wrong) </p><div class="bg-red-400 min-w-[40px] min-h-[30px]"></div>
+       <p>Your answer (correct) </p><div class="bg-gray-400  min-w-[40px] min-h-[30px]"></div>
+        <p>Correct Answer </p><div class="bg-green-400  min-w-[40px] min-h-[30px]"></div>
+      </div>
+
+      {{#each tablewithdata}}
+        <div
+          class="min-w-full min-h-[400px] px-32 flex flex-col justify-center align-middle gap-y-20 p-5"
+          id="slide{{@index}}"
+        >
+
+          <h2 class="text-3xl font-bold text-center"><p
+            >{{this.question}}</p></h2>
+          <div class="grid min-w-full gap-y-2">
+            <div class="{{button ../tablewithdata ../useranswers @index 0}} space-x-2 text-xl pl-2 rounded-md"><input
+                class="{{button ../tablewithdata ../useranswers @index 0}} scale-125 "
+                name="{{@index}}"
+                value=`{{this.choice_1}}`
+                type="radio"
+                {{checked ../tablewithdata ../useranswers @index 0}}
+              /><label >{{this.choice_1}}</label></div>
+              
+            <div class="{{button ../tablewithdata ../useranswers @index 1}} space-x-2 text-xl pl-2 rounded-md"><input
+                class="{{button ../tablewithdata ../useranswers @index 1}} scale-125"
+                name="{{@index}}"
+                value=`{{this.choice_2}}`
+                type="radio"
+                {{checked ../tablewithdata ../useranswers @index 1}}
+              /><label class=''>{{this.choice_2}}</label></div>
+            {{#notequal this.choice_3 null}}
+              <div class="{{button ../tablewithdata ../useranswers @index 2}} space-x-2 text-xl pl-2 rounded-md"><input
+                  class="{{button ../tablewithdata ../useranswers @index 2}} scale-125 "
+                  name="{{@index}}"
+                  value=`{{this.choice_3}}`
+                  type="radio"
+                  {{checked ../tablewithdata ../useranswers @index 2}}
+                /><label class=''>{{this.choice_3}}</label></div>
+            {{/notequal}}
+            {{#notequal this.choice_4 null}}
+              <div class="{{button ../tablewithdata ../useranswers @index 3}} space-x-2 text-xl pl-2 rounded-md"><input
+                  class="{{button ../tablewithdata ../useranswers @index 3}} scale-125 "
+                  name="{{@index}}"
+                  value=`{{this.choice_4}}`
+                  {{checked ../tablewithdata ../useranswers @index 3}}
+                  type="radio"
+                /><label class="">{{this.choice_4}}</label></div>
+            {{/notequal}}
+          </div>
+         
+          
+        </div>
+      {{/each}}
+      
+    </form>
+
+  </div>
+</body>

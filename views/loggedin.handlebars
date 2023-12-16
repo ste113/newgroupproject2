@@ -1,0 +1,12 @@
+<div class="flex space-x-2 justify-between px-2 text-xl"><h1>Hi
+    {{name}}!</h1><form action="/logout?_method=DELETE" method="post"><button
+      type="submit"
+    >Logout</button></form></div>
+
+<div class="grid place-content-center gap-y-5 min-h-[100vh] text-6xl font-bold">
+  <h2>Random Quiz!</h2>
+
+  <button
+    class="bg-white text-black py-5 px-10 rounded-lg max-w-fit justify-self-center"
+  ><a href="/quizzes/{{quizid}}#slide0">Start</a></button>
+</div>

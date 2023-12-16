@@ -1,0 +1,38 @@
+<div class="flex space-x-2 justify-end pr-2 text-xl"><a
+    href="/register"
+  >Register</a>
+  <div>|</div>
+  <a href="/">Home</a></div>
+
+<div class="grid w-screen text-black min-h-screen">
+
+  <form
+    class="place-self-center grid min-w-[30%] min-h-[40%] px-32 bg-white rounded-lg p-5"
+    action="/login/password"
+    method="post"
+  >
+    <h2 class="text-3xl font-bold text-center">Log in</h2>
+    <label for="username" class="font-bold">Username</label>
+    <input
+      id="username"
+      name="username"
+      placeholder="username"
+      class="indent-1 border outline-none border-black rounded-md"
+      type="text"
+      autocomplete="username"
+    />
+    <br />
+    <label for="current-password" class="font-bold">Password</label>
+    <input
+      id="current-password"
+      placeholder="password"
+      name="password"
+      class="indent-1 outline-none border border-black rounded-md"
+      type="password"
+      autocomplete="current-password"
+    />
+    <br />
+    <button type="submit">Sign in</button>
+    {{message}}
+  </form>
+</div>

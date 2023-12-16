@@ -1,0 +1,62 @@
+<body class="bg-black overflow-y-hidden">
+  <div class="grid w-screen text-black min-h-screen">
+
+    <form
+      action="{{action}}"
+      method="post"
+      class="place-self-center flex max-w-[750px] overflow-x-hidden"
+    >
+      {{#each results}}
+        <div
+          class="min-w-full min-h-[400px] px-32 flex flex-col justify-center align-middle gap-y-20 bg-white rounded-lg p-5"
+          id="slide{{@index}}"
+        >
+          <h2 class="text-3xl font-bold text-center"><p
+            >{{this.question}}</p></h2>
+          <div class="grid min-w-full">
+            <div class="scale-125 space-x-2"><input
+                name="{{@index}}"
+                value={{replace this.choice_1}}
+                type="radio"
+              /><label class="text-xl">{{this.choice_1}}</label></div>
+            <div class="space-x-2 scale-125"><input
+                name="{{@index}}"
+                value={{replace this.choice_2}}
+                type="radio"
+              /><label class="text-xl">{{this.choice_2}}</label></div>
+            {{#notequal this.choice_3 null}}
+              <div class="space-x-2 scale-125"><input
+                  class=""
+                  name="{{@index}}"
+                  value={{replace this.choice_3}}
+                  type="radio"
+                /><label class="text-xl">{{this.choice_3}}</label></div>
+            {{/notequal}}
+            {{#notequal this.choice_4 null}}
+              <div class="space-x-2 scale-125"><input
+                  class=""
+                  name="{{@index}}"
+                  value={{replace this.choice_4}}
+                  type="radio"
+                /><label class="text-xl">{{this.choice_4}}</label></div>
+            {{/notequal}}
+          </div>
+          {{#notequal @index 4}}
+            <div class="flex justify-end">
+              <a
+                href="#slide{{add @index }}"
+                className="btn btn-circle"
+              >Next</a>
+            </div>
+          {{/notequal}}
+          {{#equal @index 4}}
+            <div class="flex justify-end">
+              <button type="submit" className="btn btn-circle">Submit</button>
+            </div>
+          {{/equal}}
+        </div>
+      {{/each}}
+    </form>
+
+  </div>
+</body>
