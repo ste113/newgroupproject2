@@ -1,6 +1,6 @@
-# Xccelerate Group 2 Project (local)
+# QuizApp
 
-This is a simple quiz application built with Express.js and PostgreSQL. It allows users to take quizzes and keeps track of their scores.
+This is a simple quiz application built with Express.js and Sqlite. It allows users to take quizzes and keeps track of their scores.
 
 ## Table of Contents
 
@@ -49,11 +49,7 @@ Start the server:
 npm run dev
 ```
 
-Update these variables with your own configuration.
-
-```bash
-DATABASE_URL=""
-```
+Rename the .env-example file to .env
 
 1. For schema changes, head to the schema.ts file and edit it, then run the command:
 
