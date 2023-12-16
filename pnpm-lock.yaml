@@ -8,18 +8,9 @@ dependencies:
   bcrypt:
     specifier: ^5.1.1
     version: 5.1.1
-  bcryptjs:
-    specifier: ^2.4.3
-    version: 2.4.3
-  better-express-store:
-    specifier: ^1.0.4
-    version: 1.0.4
   better-sqlite3:
     specifier: ^9.2.2
     version: 9.2.2
-  better-sqlite3-session-store:
-    specifier: ^0.1.0
-    version: 0.1.0
   body-parser:
     specifier: ^1.20.2
     version: 1.20.2
@@ -32,15 +23,9 @@ dependencies:
   drizzle-orm:
     specifier: ^0.29.1
     version: 0.29.1(@types/better-sqlite3@7.6.8)(better-sqlite3@9.2.2)
-  exphbs:
-    specifier: ^1.2.0
-    version: 1.2.0
   express:
     specifier: ^4.18.2
     version: 4.18.2
-  express-flash-message:
-    specifier: ^3.0.2
-    version: 3.0.2(express@4.18.2)
   express-handlebars:
     specifier: ^7.1.2
     version: 7.1.2
@@ -56,23 +41,14 @@ dependencies:
   passport-local:
     specifier: ^1.0.0
     version: 1.0.0
-  ts-better-sqlite3-express-session:
-    specifier: ^1.2.1
-    version: 1.2.1
 
 devDependencies:
   '@types/bcrypt':
     specifier: ^5.0.2
     version: 5.0.2
-  '@types/bcryptjs':
-    specifier: ^2.4.6
-    version: 2.4.6
   '@types/better-sqlite3':
     specifier: ^7.6.8
     version: 7.6.8
-  '@types/body-parser':
-    specifier: ^1.19.5
-    version: 1.19.5
   '@types/connect-flash':
     specifier: ^0.0.40
     version: 0.0.40
@@ -879,10 +855,6 @@ packages:
       '@types/node': 20.10.4
     dev: true
 
-  /@types/bcryptjs@2.4.6:
-    resolution: {integrity: sha512-9xlo6R2qDs5uixm0bcIqCeMCE6HiQsIyel9KQySStiyqNl2tnj2mP3DX1Nf56MD6KMenNNlBBsy3LJ7gUEQPXQ==}
-    dev: true
-
   /@types/better-sqlite3@7.6.8:
     resolution: {integrity: sha512-ASndM4rdGrzk7iXXqyNC4fbwt4UEjpK0i3j4q4FyeQrLAthfB6s7EF135ZJE0qQxtKIMFwmyT6x0switET7uIw==}
     dependencies:
@@ -1102,20 +1074,6 @@ packages:
     transitivePeerDependencies:
       - encoding
       - supports-color
-    dev: false
-
-  /bcryptjs@2.4.3:
-    resolution: {integrity: sha512-V/Hy/X9Vt7f3BbPJEi8BdVFMByHi+jNXrYkW3huaybV/kQ0KJg0Y6PkEMbn+zeT+i+SiKZ/HMqJGIIt4LZDqNQ==}
-    dev: false
-
-  /better-express-store@1.0.4:
-    resolution: {integrity: sha512-TwcSAFWlGQWs+8yNW1VQSrRaTbzkI1cD4va6PDpFwCdsx4OntEPcIQ3+K6LJViGN2ZqokuuDDUfK+mq3XG7Ibw==}
-    dev: false
-
-  /better-sqlite3-session-store@0.1.0:
-    resolution: {integrity: sha512-O4EO5jOGTEa/c1DbZpP3C7VTDLSWe5lrOu1S/j86ipdGZxrSb8bSUVuRgWCgl/SCgEGmyeEqvlMY9HtyOSMOWA==}
-    dependencies:
-      date-fns: 2.16.1
     dev: false
 
   /better-sqlite3@9.2.2:
@@ -1373,11 +1331,6 @@ packages:
   /data-uri-to-buffer@2.0.2:
     resolution: {integrity: sha512-ND9qDTLc6diwj+Xe5cdAgVTbLVdXbtxTJRXRhli8Mowuaan+0EJOtdqJ0QCHNSSPyoXGx9HX2/VMnKeC34AChA==}
     dev: true
-
-  /date-fns@2.16.1:
-    resolution: {integrity: sha512-sAJVKx/FqrLYHAQeN7VpJrPhagZc9R4ImZIWYRFZaaohR3KzmuK88touwsSwSVT8Qcbd4zoDsnGfX4GFB4imyQ==}
-    engines: {node: '>=0.11'}
-    dev: false
 
   /debug@2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
@@ -1750,22 +1703,6 @@ packages:
   /expand-template@2.0.3:
     resolution: {integrity: sha512-XYfuKMvj4O35f/pOXLObndIRvyQ+/+6AhODh+OKWj9S9498pHHn/IMszH+gt0fBCRWMNfk1ZSp5x3AifmnI2vg==}
     engines: {node: '>=6'}
-    dev: false
-
-  /exphbs@1.2.0:
-    resolution: {integrity: sha512-nDaQAEJcXbdZ2Od68ha8AxZMX0LlYT1O4N6D9/hn0ZN+YkQDI6dSNUMHCBGSNP72EiiCMjVbYwraiInKWJwAlw==}
-    dependencies:
-      glob: 7.2.3
-      handlebars: 4.7.8
-    dev: false
-
-  /express-flash-message@3.0.2(express@4.18.2):
-    resolution: {integrity: sha512-+/8gPkjUPNHpF1jocI+q/1V5p2I4dzvJFXa8f3eLUhRFgPujIOr1v+eSyazVhMj006IkTy3Lj41hK0g8d2KG1Q==}
-    engines: {node: '>=v16.17.1'}
-    peerDependencies:
-      express: ^4.18.2
-    dependencies:
-      express: 4.18.2
     dev: false
 
   /express-handlebars@7.1.2:
@@ -2999,10 +2936,6 @@ packages:
 
   /tr46@0.0.3:
     resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
-    dev: false
-
-  /ts-better-sqlite3-express-session@1.2.1:
-    resolution: {integrity: sha512-SVhVDcWlPslBlGWhTXuX3iTBUh0blxUlUFkvE71oGLz454pqIy+pkLoYgDtulDQ/bJGMSsP7zn/23BuCIyuJnA==}
     dev: false
 
   /ts-node@10.9.2(@types/node@20.10.4)(typescript@5.3.3):
